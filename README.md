@@ -19,6 +19,7 @@ This project is a web application that allows users to view images and videos fr
 - Date Selection: Allows users to input/select a date for fetching NASA APOD content.
 - Dynamic Media Rendering: Automatically displays images or videos based on API data.
 - Cross-Device Compatibility: Ensures smooth experience across all device sizes.
+- More api integration anticipated
 
 ## How to Use
 - Clone this repository or download the source code.
