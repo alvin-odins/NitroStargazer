@@ -4,61 +4,86 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to NitroStarGazer</title>
 	<script src="https://cdn.tailwindcss.com"></script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
-		rel="stylesheet">
-
-	<title>Title in the tab</title>
-
-	<!-- external CSS link -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </head>
 
+<body class="bg-white text-gray-900">
+	<!-- Navbar -->
+	<header class="bg-white shadow-md">
+		<nav class="container mx-auto p-4 flex items-center justify-between">
+			<!-- Logo -->
+			<div class="text-2xl font-bold text-blue-600">NitroStarGazer</div>
 
+			<!-- Hamburger Icon -->
+			<div class="lg:hidden">
+				<a id="nav-toggle" class="text-gray-700 focus:outline-none">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</a>
+			</div>
 
-<header class="bg-white">
-	<nav class="flex justify-between items-center w-[92%] mx-auto">
-		<div>
-			<!-- <img class="w-16" src="img/milkyway.png" alt="...">
-			</div> -->
-			<div
-				class="nav-links md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-				<ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-					<li><a class="hover:text-gray-500" href="">Home</a></li>
-					<li><a class="hover:text-gray-500" href="">Home 2</a></li>
-					<li><a class="hover:text-gray-500" href="">Home 3</a></li>
-					<li><a class="hover:text-gray-500" href="">Home 4</a></li>
+			<!-- Navbar Links -->
+			<div id="nav-menu"
+				class="hidden lg:flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 text-gray-700">
+				<a href="#" class="hover:text-blue-600">Home</a>
+				<a href="#" class="hover:text-blue-600">Features</a>
+				<a href="#" class="hover:text-blue-600">Pricing</a>
+				<a href="#" class="hover:text-blue-600">Contact</a>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="py-12 px-6 sm:px-8 lg:px-16">
+		<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			<!-- Left Content -->
+			<div>
+				<p class="text-blue-600 font-semibold mb-2">Welcome to the Featured Photos from Outer Space</p>
+				<h2 class="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+					Transforming NASA's API to Inspire and Animate your calendar days
+				</h2>
+				<p class="text-gray-600 text-lg mb-8">
+					The NitroStargGazer web application is designed to access NASA's public api to render to
+					beautiful pictures
+					captured by the space center's powerful telescopes view of outer space.
+				</p>
+
+				<!-- Feature List -->
+				<ul class="space-y-6">
+					<li class="flex items-start">
+						<span class="text-blue-600 mt-1">&#128190;</span>
+						<div class="ml-4">
+							<p class="font-bold text-gray-900">Inspirational driven</p>
+							<p class="text-gray-600">
+								Inspired by interest for all things celestial, NitroStarGazer will allow you to
+								take a deep peek through the space center's extre teresterial telescopes and render live outerspace
+								content to animate your desktop.
+							</p>
+						</div>
+					</li>
+					<li class="flex items-start">
+						<span class="text-blue-600 mt-1">&#9989;</span>
+						<div class="ml-4">
+							<p class="font-bold text-gray-900">Simplicity</p>
+							<p class="text-gray-600">
+								A simple web application that is designed with simplicity in mind.
+							</p>
+						</div>
+					</li>
+					<li class="flex items-start">
+						<span class="text-blue-600 mt-1">&#128187;</span>
+						<div class="ml-4">
+							<p class="font-bold text-gray-900">User friendly</p>
+							<p class="text-gray-600">
+								As our guest on this platform we invite you to select a date from the calendar and click on the button
+								to discover what picture for today lies in outer space
+							</p>
+						</div>
+					</li>
 				</ul>
-			</div>
-			<div class="flex items-center gap-6">
-				<ion-icon onclick="onToggleMenu" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-			</div>
-	</nav>
-</header>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
-
-	<h1>Picture of the Day</h1>
-	<input type="date" name="" value="">
-	<button class="bg-[#ffbb22] text-white px-5 py-2 rounded-full hover:bg-[#10acff]">Get Media</button>
-
-	<h2>NASA Gateway to Outer Space</h2>
-	<img class="w-64" alt="">
-	<iframe src="" frameborder="0"></iframe>
-	<h3>Explanation</h3>
-
-	<script type="text/javascript" src="js/main.js"></script>
-	<script>
-		const navLinks = document.querySelector('.nav-links')
-		function onToggleMenu(e) {
-			e.name = e.name === 'menu' ? 'close' : 'menu'
-			navLinks.classList.toggle('top-[9%]')
-		}
-	</script>
 </body>
 
 </html>
