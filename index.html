@@ -84,6 +84,37 @@
 					</li>
 				</ul>
 
+				<!-- Buttons -->
+				<div class="mt-8 flex space-x-4">
+					<button class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700">
+						Get Media
+					</button>
+
+					<input type="date" id="schedule"
+						class="block w-full px-4 py-3 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent sm:w-auto" />
+				</div>
+			</div>
+
+			<!-- Right Image -->
+			<div class="relative">
+
+				<div id="iframe-container" class="hidden">
+					<iframe id="videoFrame" class="w-full aspect-video rounded-lg shadow-lg" src="" frameborder="0"
+						allowfullscreen></iframe>
+				</div>
+
+				<img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/600x400" alt="..." />
+
+				<h3 class="mt-4  sm:text-l text-gray-600 text-center"></h3>
+			</div>
+		</div>
+	</section>
+
+	<!-- JavaScript for Navbar Toggle -->
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/toggle.js"></script>
+
 </body>
 
 </html>
