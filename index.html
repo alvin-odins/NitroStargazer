@@ -1,27 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
 
-		<title>Title in the tab</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+		rel="stylesheet">
 
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
+	<title>Title in the tab</title>
 
-		<h1>Picture of the Day</h1>
-		<input type="date" name="" value="">
-		<button type="button" name="button">Get Media</button>
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
 
-		<h2>NASA Gateway to Outer Space</h2>
-		<img src="img/planets.jpeg" alt="">
-		<iframe src="" frameborder="0"></iframe>
-		<h3>Explanation</h3>
 
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+
+<header class="bg-white">
+	<nav class="flex justify-between items-center w-[92%] mx-auto">
+		<div>
+			<!-- <img class="w-16" src="img/milkyway.png" alt="...">
+			</div> -->
+			<div
+				class="nav-links md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+				<ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+					<li><a class="hover:text-gray-500" href="">Home</a></li>
+					<li><a class="hover:text-gray-500" href="">Home 2</a></li>
+					<li><a class="hover:text-gray-500" href="">Home 3</a></li>
+					<li><a class="hover:text-gray-500" href="">Home 4</a></li>
+				</ul>
+			</div>
+			<div class="flex items-center gap-6">
+				<ion-icon onclick="onToggleMenu" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+			</div>
+	</nav>
+</header>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
+
+	<h1>Picture of the Day</h1>
+	<input type="date" name="" value="">
+	<button class="bg-[#ffbb22] text-white px-5 py-2 rounded-full hover:bg-[#10acff]">Get Media</button>
+
+	<h2>NASA Gateway to Outer Space</h2>
+	<img class="w-64" alt="">
+	<iframe src="" frameborder="0"></iframe>
+	<h3>Explanation</h3>
+
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		const navLinks = document.querySelector('.nav-links')
+		function onToggleMenu(e) {
+			e.name = e.name === 'menu' ? 'close' : 'menu'
+			navLinks.classList.toggle('top-[9%]')
+		}
+	</script>
+</body>
+
 </html>
