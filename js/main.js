@@ -25,7 +25,7 @@ function getFetch(){
 
           document.querySelector('iframe').src = data.url
           document.querySelector('iframe').classList.remove('hidden')
-          document.querySelector('iframe').classList.add('hidden')
+          document.querySelector('img').classList.add('hidden')
         }
       
         document.querySelector('h3').innerText = data.explanation
