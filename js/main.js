@@ -3,6 +3,12 @@ document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
   const choice = document.querySelector('input').value
+
+  if(!choice) {
+    alert('Please choose a date before generating photo of day')
+    return;
+  }
+  
   const url = `https://api.nasa.gov/planetary/apod?api_key=OZxdntAjPsj7i2DLWnNP4tuQyKDdzKvN10i0C0Lr&date=${choice}`
 
   fetch(url)
@@ -21,4 +27,3 @@ function getFetch(){
           console.log(`error ${err}`)
       });
 }
-
