@@ -16,21 +16,19 @@
 			<div class="text-2xl font-bold text-blue-600">NitroStarGazer</div>
 
 			<!-- Hamburger Icon -->
-			<div class="lg:hidden">
-				<a id="nav-toggle" class="text-gray-700 focus:outline-none">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-					</svg>
-				</a>
-			</div>
+			<a id="hamburger" class="block md:hidden text-gray-600 focus:outline-none">
+				<!-- Icon -->
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</a>
 
 			<!-- Navbar Links -->
-			<div id="nav-menu"
-				class="hidden lg:flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 text-gray-700">
+			<div id="nav-links" class="hidden md:flex flex-col md:flex-row md:space-x-6 items-center text-lg">
 				<a href="#" class="hover:text-blue-600">Home</a>
-				<a href="#" class="hover:text-blue-600">Features</a>
-				<a href="#" class="hover:text-blue-600">Pricing</a>
-				<a href="#" class="hover:text-blue-600">Contact</a>
+				<a href="#" class="hover:text-blue-600">Comets</a>
+				<a href="#" class="hover:text-blue-600">Asteriods</a>
+				<a href="#" class="hover:text-blue-600">About Us</a>
 			</div>
 		</nav>
 	</header>
@@ -95,17 +93,15 @@
 				</div>
 			</div>
 
-			<!-- Right Image -->
-			<div class="relative">
+			<!-- Right media -->
+			<div class="relative mt-6">
 
-				<div id="iframe-container" class="hidden">
-					<iframe id="videoFrame" class="w-full aspect-video rounded-lg shadow-lg" src="" frameborder="0"
-						allowfullscreen></iframe>
-				</div>
+				<iframe id="videoFrame" class="w-full h-screen rounded-lg shadow-lg hidden" src="" frameborder="0"
+					allowfullscreen></iframe>
 
-				<img class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/600x400" alt="..." />
+				<img id="photo" class="w-full rounded-lg shadow-lg" src="https://via.placeholder.com/600x400" alt="..." />
 
-				<h3 class="mt-4  sm:text-l text-gray-600 text-center"></h3>
+				<h3 class="mt-4  sm:text-l text-gray-500 text-center"></h3>
 			</div>
 		</div>
 	</section>
